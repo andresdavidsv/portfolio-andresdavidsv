@@ -1,3 +1,4 @@
+import { Header } from '@/components/Header';
 import Head from 'next/head';
 
 export default function Home() {
@@ -6,7 +7,14 @@ export default function Home() {
       <Head>
         <title>Andres Portfolio</title>
       </Head>
-      <h1 className="text-red-500">Hello</h1>
+      {/* Header */}
+      <Header />
+      {/* Hero */}
+      {/* About */}
+      {/* Experience */}
+      {/* Skills */}
+      {/* Project */}
+      {/* Contact Me */}
     </>
   );
 }
