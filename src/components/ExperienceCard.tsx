@@ -60,7 +60,7 @@ export const ExperienceCard = ({}: Props) => {
           Present
         </p>
       </div>
-      <ul className="px-0 md:px-10 list-disc  text-white space-y-2 pr-5 text-justify ml-0 text-sm md:text-lg pl-5 overflow-y-scroll scrollbar-thin scrollbar-track-gray-200 scrollbar-thumb-darkGreen/80">
+      <ul className="px-0 md:px-10 list-disc  text-white space-y-2 pr-5 text-justify ml-0 text-sm md:text-lg pl-5 overflow-y-scroll scrollbar-thin scrollbar-track-gray-200 scrollbar-thumb-gray-500/80">
         {/* {experience?.points.map((point, i) => (
           <li key={i}>{point}</li>
         ))} */}
