@@ -1,4 +1,6 @@
 import Head from 'next/head';
+import Link from 'next/link';
+
 import { Header } from '@/components/Header';
 import { Hero } from '@/components/Hero';
 import { About } from '@/components/About';
@@ -27,6 +29,15 @@ export default function Home() {
       {/* Skills */}
       {/* Project */}
       {/* Contact Me */}
+      <Link href="#hero">
+        <footer className="sticky bottom-5 w-full cursor-pointer">
+          <div className="flex items-center justify-center">
+            <div className="h-10 w-10 bg-darkGreen/80 rounded-full flex items-center justify-center">
+              Icono
+            </div>
+          </div>
+        </footer>
+      </Link>
     </div>
   );
 }
