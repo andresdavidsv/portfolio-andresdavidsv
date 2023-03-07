@@ -22,43 +22,43 @@ import { Contact } from '@/components/Contact';
 
 type Props = {
   pageInfo: PageInfo;
-  // experiences: Experience[];
-  // skills: Skill[];
-  // projects: Project[];
-  // socials: Social[];
+  experiences: Experience[];
+  skills: Skill[];
+  projects: Project[];
+  socials: Social[];
 };
 
-const Home = ({ pageInfo }: Props) => {
+const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
   return (
     <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar-thin scrollbar-thumb-yellow-500/80">
       <Head>
         <title>Andres Portfolio</title>
       </Head>
       {/* Header */}
-      <Header />
+      <Header socials={socials} />
       {/* Hero */}
       <section id="hero" className="snap-start">
         <Hero pageInfo={pageInfo} />
       </section>
       {/* About */}
       <section id="about" className="snap-center">
-        <About />
+        <About pageInfo={pageInfo} />
       </section>
       {/* Experience */}
       <section id="experience" className="snap-center">
-        <WorkExperience />
+        <WorkExperience experiences={experiences} />
       </section>
       {/* Skills */}
       <section id="skills" className="snap-start">
-        <Skills />
+        <Skills skills={skills} />
       </section>
       {/* Project */}
       <section id="projects" className="snap-start">
-        <Projects />
+        <Projects projects={projects} />
       </section>
       {/* Contact Me */}
       <section id="contact" className="snap-start">
-        <Contact />
+        <Contact pageInfo={pageInfo} />
       </section>
       <Link href="#hero">
         <footer className="sticky bottom-5 w-full cursor-pointer">
@@ -77,18 +77,18 @@ export default Home;
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const pageInfo = await fetchPageInfo();
-  // const experiences = await fetchExperiences();
-  // const skills = await fetchSkills();
-  // const projects = await fetchProjects();
-  // const socials = await fetchSocials();
+  const experiences = await fetchExperiences();
+  const skills = await fetchSkills();
+  const projects = await fetchProjects();
+  const socials = await fetchSocials();
 
   return {
     props: {
       pageInfo,
-      // experiences,
-      // skills,
-      // projects,
-      // socials,
+      experiences,
+      skills,
+      projects,
+      socials,
     },
     revalidate: 10,
   };

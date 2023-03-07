@@ -1,10 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Project as IProject } from '@/interfaces';
 import { Project } from './Project';
 
-type Props = {};
+type Props = { projects: IProject[] };
 
-export const Projects = ({}: Props) => {
+export const Projects = ({ projects }: Props) => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -17,14 +18,9 @@ export const Projects = ({}: Props) => {
       </h3>
 
       <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-yellow-500/80">
-        {/* {projects?.map((project, i) => (
-          
-        ))} */}
-        <Project />
-        <Project />
-        <Project />
-        <Project />
-        <Project />
+        {projects?.map((project, i) => (
+          <Project key={i} project={project} />
+        ))}
       </div>
 
       <div className="w-full absolute top-[20%] md:top-[30%] bg-gray-500/40 left-0 h-[500px] -skew-y-12"></div>
