@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 import { Project as IProject } from '@/interfaces';
 import { urlFor } from '../../sanity';
 
-type Props = { project: IProject; key: number };
+type Props = { project: IProject; id: number };
 
-export const Project = ({ project, key }: Props) => {
+export const Project = ({ project, id }: Props) => {
   return (
     <div
       key={project._id}
@@ -24,7 +24,7 @@ export const Project = ({ project, key }: Props) => {
       <div className="space-y-5 md:space-y-10 px-0 md:px-10 max-w-6xl">
         <h4 className="text-lg md:text-2xl lg:text-4xl font-semibold text-center">
           <span className="underline decoration-gray-500/50">
-            Project {key + 1}:
+            Project {id + 1}:
           </span>{' '}
           {project?.title}
           Project

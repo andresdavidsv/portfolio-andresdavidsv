@@ -1,10 +1,27 @@
 import { Social } from '@/interfaces';
 
+interface ApiResponse {
+  socials: Social[];
+}
+
 export const fetchSocials = async () => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/getSocials`);
-
-  const data = await res.json();
-  const socials: Social[] = data.socials;
-
-  return socials;
+  try {
+    const apiUrl = new URL(
+      '/api/getSocials',
+      process.env.NEXT_PUBLIC_BASE_URL
+    ).toString();
+    const res = await fetch(apiUrl);
+    if (!res.ok) {
+      throw new Error(
+        'No se pudo obtener la información de las redes sociales'
+      );
+    }
+    const data: ApiResponse = await res.json();
+    return data.socials;
+  } catch (error) {
+    console.error(error);
+    throw new Error(
+      'Hubo un error al obtener la información de las redes sociales'
+    );
+  }
 };

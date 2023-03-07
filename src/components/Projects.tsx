@@ -19,7 +19,7 @@ export const Projects = ({ projects }: Props) => {
 
       <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-yellow-500/80">
         {projects?.map((project, i) => (
-          <Project key={i} project={project} />
+          <Project key={i} project={project} id={i} />
         ))}
       </div>
 
