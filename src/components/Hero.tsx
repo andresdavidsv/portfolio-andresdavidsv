@@ -14,9 +14,10 @@ type Props = { pageInfo: PageInfo };
 export const Hero = ({ pageInfo }: Props) => {
   const [text] = useTypewriter({
     words: [
-      'Hi, The Name`s Andres Solarte',
-      'Guy-who-loves-Coffee.tsx',
-      '<ButlovesToCodeMore />',
+      'Hi, I`m Andres Solarte',
+      'Mobile_Developer.tsx',
+      '<JavaScript Developer />',
+      'National Triathlete',
     ],
     loop: true,
     delaySpeed: 2000,

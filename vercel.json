@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "sanity/api/**/*.ts",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "sanity/api/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "sanity/web/$1"
+    }
+  ]
+}
