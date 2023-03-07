@@ -46,7 +46,7 @@ const Home = () => {
         <footer className="sticky bottom-5 w-full cursor-pointer">
           <div className="flex items-center justify-center">
             <div className="h-10 w-10 bg-yellowColor/80 rounded-full flex items-center justify-center">
-              <HomeIcon className="h-7 w-17 pb-0.5 hover:yellowColor text-white animate-pulse" />
+              <HomeIcon className="h-7 w-17 pb-0.5 hover:grayscale-100 text-white animate-pulse" />
             </div>
           </div>
         </footer>
