@@ -8,6 +8,7 @@ import { PageInfo } from '@/interfaces';
 import { urlFor } from '../../sanity';
 
 import { BackgroundCricles } from './BackgroundCricles';
+import DownloadButton from './DownloadButton';
 
 type Props = { pageInfo: PageInfo };
 
@@ -53,6 +54,10 @@ export const Hero = ({ pageInfo }: Props) => {
           <Link href={'#projects'}>
             <button className="heroButton">Projects</button>
           </Link>
+          <DownloadButton
+            fileUrl={'/static/Andres_David_Solarte_Vidal.pdf'}
+            fileName="Andres_David_Solarte_Vidal.pdf"
+          />
         </div>
       </div>
     </div>
