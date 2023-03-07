@@ -22,13 +22,13 @@ import { Contact } from '@/components/Contact';
 
 type Props = {
   pageInfo: PageInfo;
-  experiences: Experience[];
-  skills: Skill[];
-  projects: Project[];
-  socials: Social[];
+  // experiences: Experience[];
+  // skills: Skill[];
+  // projects: Project[];
+  // socials: Social[];
 };
 
-const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
+const Home = ({ pageInfo }: Props) => {
   return (
     <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar-thin scrollbar-thumb-yellow-500/80">
       <Head>
@@ -77,18 +77,18 @@ export default Home;
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const pageInfo = await fetchPageInfo();
-  const experiences = await fetchExperiences();
-  const skills = await fetchSkills();
-  const projects = await fetchProjects();
-  const socials = await fetchSocials();
+  // const experiences = await fetchExperiences();
+  // const skills = await fetchSkills();
+  // const projects = await fetchProjects();
+  // const socials = await fetchSocials();
 
   return {
     props: {
       pageInfo,
-      experiences,
-      skills,
-      projects,
-      socials,
+      // experiences,
+      // skills,
+      // projects,
+      // socials,
     },
     revalidate: 10,
   };
