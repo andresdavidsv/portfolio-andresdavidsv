@@ -31,19 +31,17 @@ export const Contact = ({}: Props) => {
         <div className="space-y-1 md:space-y-3 lg:space-y-3 xl:space-y-3 2xl:space-y-5">
           <div className="flex items-center space-x-5 justify-center">
             <PhoneIcon className="text-gray-500 h-7 w-7 animate-pulse" />
-            <p className="text-lg md:text-2xl lg:text-2xl">+44 78 108 35 079</p>
+            <p className="text-lg md:text-2xl lg:text-2xl">+57 304 373 8746</p>
           </div>
           <div className="flex items-center space-x-5 justify-center">
             <EnvelopeIcon className="text-gray-500 h-7 w-7 animate-pulse" />
             <p className="text-lg md:text-2xl lg:text-2xl">
-              mitch.sparrow@hotmail.com
+              soy@andresdavidsv.com
             </p>
           </div>
           <div className="flex items-center space-x-5 justify-center">
             <MapPinIcon className="text-gray-500 h-7 w-7 animate-pulse" />
-            <p className="text-lg md:text-2xl lg:text-2xl">
-              Glasgow, United Kingdom
-            </p>
+            <p className="text-lg md:text-2xl lg:text-2xl">Cali, Colombia</p>
           </div>
         </div>
 
