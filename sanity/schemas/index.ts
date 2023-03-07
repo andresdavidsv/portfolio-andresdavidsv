@@ -1,7 +1,7 @@
 import pageInfo from './pageInfo'
-import experiences from './experiences'
-import projects from './projects'
-import skills from './skills'
-import socials from './socials'
+import experience from './experience'
+import project from './project'
+import skill from './skill'
+import social from './social'
 
-export const schemaTypes = [pageInfo, experiences, projects, skills, socials]
+export const schemaTypes = [pageInfo, experience, project, skill, social]
