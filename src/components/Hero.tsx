@@ -3,11 +3,15 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
+
+import { PageInfo } from '@/interfaces';
+import { urlFor } from '../../sanity';
+
 import { BackgroundCricles } from './BackgroundCricles';
 
-type Props = {};
+type Props = { pageInfo: PageInfo };
 
-export const Hero = (props: Props) => {
+export const Hero = ({ pageInfo }: Props) => {
   const [text] = useTypewriter({
     words: [
       'Hi, The Name`s Andres Solarte',
@@ -22,14 +26,14 @@ export const Hero = (props: Props) => {
       <BackgroundCricles />
       <Image
         className="relative rounded-full h-32 w-32 mx-auto object-cover"
-        src="https://media.licdn.com/dms/image/C5603AQHrtQiGaZxuhg/profile-displayphoto-shrink_200_200/0/1609116862933?e=1683763200&v=beta&t=H9cIj1S2bfqadhn3e0EU3sCV6yZ41bhIlXPh4H5hYOs"
+        src={urlFor(pageInfo?.heroImage).url()}
         alt="andres david sv"
         width={200}
         height={200}
       />
       <div className="z-20">
         <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[10px] md:tracking-[15px]">
-          Software Engineer
+          {pageInfo?.role}
         </h2>
         <h1 className="text-2xl md:text-5xl lg:text-6xl font-semibold px-10">
           <span className="mr-3">{text}</span>
