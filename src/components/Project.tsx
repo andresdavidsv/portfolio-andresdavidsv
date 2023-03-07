@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Project as IProject } from '@/interfaces';
 import { urlFor } from '../../sanity';
@@ -31,11 +32,13 @@ export const Project = ({ project, id }: Props) => {
         </h4>
         <div className="flex items-center space-x-2 justify-center ">
           {project?.technologies.map((technology) => (
-            <img
+            <Image
               key={technology._id}
               className="h-10 w-10 rounded-full object-cover"
               src={urlFor(technology?.image).url()}
               alt={technology.title}
+              width={40}
+              height={40}
             />
           ))}
         </div>
