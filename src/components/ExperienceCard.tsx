@@ -24,7 +24,7 @@ export const ExperienceCard = ({}: Props) => {
               {/* {experience?.jobTitle} */}
               Test
             </h4>
-            <p className="font-bold text-md md:text-2xl  mt-1 text-lightGreen">
+            <p className="font-bold text-md md:text-2xl  mt-1 text-yellowColor">
               {/* {experience?.company} */}
               Test
             </p>

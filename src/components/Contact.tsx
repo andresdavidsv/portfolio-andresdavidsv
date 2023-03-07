@@ -25,7 +25,9 @@ export const Contact = ({}: Props) => {
       <div className="flex flex-col space-y-4 md:space-y-5 lg:space-y-6 xl:space-y-6 2xl:space-y-10">
         <h4 className="text-xl md:text-2xl lg:text-3xl 2xl:text-4xl font-semibold text-center">
           I have got just what you need.{' '}
-          <span className="decoration-gray-500/50 underline">Lets talk.</span>
+          <span className="decoration-yellowColor/50 underline">
+            Lets talk.
+          </span>
         </h4>
 
         <div className="space-y-1 md:space-y-3 lg:space-y-3 xl:space-y-3 2xl:space-y-5">
@@ -74,7 +76,7 @@ export const Contact = ({}: Props) => {
             placeholder="Message"
             className="contactInput"
           />
-          <button className="bg-lightGreen py-3 md:py-5 px-10 rounded-lg text-white font-bold text-lg">
+          <button className="bg-yellowColor py-3 md:py-5 px-10 rounded-lg text-white font-bold text-lg">
             {' '}
             Submit
           </button>
