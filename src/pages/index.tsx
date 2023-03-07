@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import { HomeIcon } from '@heroicons/react/24/solid';
 
 import { Header } from '@/components/Header';
 import { Hero } from '@/components/Hero';
@@ -9,9 +10,9 @@ import { Skills } from '@/components/Skills';
 import { Projects } from '@/components/Projects';
 import { Contact } from '@/components/Contact';
 
-export default function Home() {
+const Home = () => {
   return (
-    <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar-thin">
+    <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar-thin scrollbar-thumb-yellow-500/80">
       <Head>
         <title>Andres Portfolio</title>
       </Head>
@@ -44,12 +45,14 @@ export default function Home() {
       <Link href="#hero">
         <footer className="sticky bottom-5 w-full cursor-pointer">
           <div className="flex items-center justify-center">
-            <div className="h-10 w-10 bg-gray-500/80 rounded-full flex items-center justify-center">
-              Icono
+            <div className="h-10 w-10 bg-yellowColor/80 rounded-full flex items-center justify-center">
+              <HomeIcon className="h-7 w-17 pb-0.5 hover:yellowColor text-white animate-pulse" />
             </div>
           </div>
         </footer>
       </Link>
     </div>
   );
-}
+};
+
+export default Home;

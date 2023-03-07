@@ -32,17 +32,17 @@ export const Contact = ({}: Props) => {
 
         <div className="space-y-1 md:space-y-3 lg:space-y-3 xl:space-y-3 2xl:space-y-5">
           <div className="flex items-center space-x-5 justify-center">
-            <PhoneIcon className="text-gray-500 h-7 w-7 animate-pulse" />
+            <PhoneIcon className="text-yellowColor h-7 w-7 animate-pulse" />
             <p className="text-lg md:text-2xl lg:text-2xl">+57 304 373 8746</p>
           </div>
           <div className="flex items-center space-x-5 justify-center">
-            <EnvelopeIcon className="text-gray-500 h-7 w-7 animate-pulse" />
+            <EnvelopeIcon className="text-yellowColor h-7 w-7 animate-pulse" />
             <p className="text-lg md:text-2xl lg:text-2xl">
               soy@andresdavidsv.com
             </p>
           </div>
           <div className="flex items-center space-x-5 justify-center">
-            <MapPinIcon className="text-gray-500 h-7 w-7 animate-pulse" />
+            <MapPinIcon className="text-yellowColor h-7 w-7 animate-pulse" />
             <p className="text-lg md:text-2xl lg:text-2xl">Cali, Colombia</p>
           </div>
         </div>
