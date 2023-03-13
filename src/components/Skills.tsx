@@ -5,7 +5,7 @@ import { Skill } from './Skill';
 
 type Props = { skills: SkillType[] };
 
-export const Skills = ({ skills }: Props) => {
+export const   Skills = ({ skills }: Props) => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
