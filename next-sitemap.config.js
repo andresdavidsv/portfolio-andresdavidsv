@@ -7,7 +7,7 @@ if (process.env.ENVIRONMENT !== 'production') {
 }
 
 module.exports = {
-  siteUrl: process.env.URL,
+  siteUrl: process.env.NEXT_PUBLIC_BASE_URL,
   generateRobotsTxt: true,
   robotsTxtOptions: {
     policies: [policy],
