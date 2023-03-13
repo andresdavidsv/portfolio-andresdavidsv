@@ -32,7 +32,17 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
   return (
     <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar-thin scrollbar-thumb-yellow-500/80">
       <Head>
-        <title>Andres Portfolio</title>
+        <title>Andres Solarte SV</title>
+        <meta
+          name="description"
+          content="Tecnología y deporte: juntos hacia la excelencia"
+          key="desc"
+        />
+        <meta property="og:title" content="Andres Solarte SV" />
+        <meta
+          property="og:description"
+          content="Tecnología y deporte: juntos hacia la excelencia"
+        />
       </Head>
       {/* Header */}
       <Header socials={socials} />
