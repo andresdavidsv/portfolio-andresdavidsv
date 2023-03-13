@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Project as IProject } from '@/interfaces';
 import { urlFor } from '../../sanity';
@@ -30,6 +31,14 @@ export const Project = ({ project, id }: Props) => {
           {project?.title}
           Project
         </h4>
+        {project.linkToBuild && (
+          <Link
+            className="flex items-center space-x-1 justify-center "
+            href={project?.linkToBuild}
+          >
+            <button className="heroButton">Link To Build</button>
+          </Link>
+        )}
         <div className="flex items-center space-x-2 justify-center ">
           {project?.technologies.map((technology) => (
             <Image
